@@ -24,34 +24,43 @@ const Hero = () => {
         <div className="text-center">
           {/* Profile Image Placeholder */}
           <div className="mb-8 animate-in fade-in slide-in-from-bottom-4 duration-700">
-            <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-blue-400 to-indigo-600 flex items-center justify-center text-white text-4xl font-bold shadow-lg">
+            <div className="w-40 h-40 mx-auto rounded-full bg-gradient-to-br from-blue-400 via-indigo-500 to-purple-600 flex items-center justify-center text-white text-5xl font-bold shadow-2xl ring-4 ring-white">
               AK
             </div>
           </div>
 
           {/* Main Content */}
-          <div className="space-y-6 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900">
+          <div className="space-y-8 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200">
+            <h1 className="text-5xl md:text-7xl font-bold text-gray-900 leading-tight">
               Hi, I'm{' '}
-              <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-                Ashutosh Kumar
+              <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">
+                Ashutosh Kumar Jaiswal
               </span>
             </h1>
             
-            <h2 className="text-xl md:text-2xl text-gray-600 font-medium">
-              Fresher Software Engineer
+            <h2 className="text-2xl md:text-3xl text-gray-700 font-semibold">
+              Full-Stack Software Engineer
             </h2>
             
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-              Passionate about creating innovative solutions with modern web technologies. 
-              Ready to contribute to impactful projects and grow as a developer.
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Passionate about building scalable web applications and innovative solutions with modern technologies. 
+              Experienced in full-stack development, cloud platforms, and creating seamless user experiences.
             </p>
 
+            {/* Key Highlights */}
+            <div className="flex flex-wrap justify-center gap-4 mt-8">
+              {['React & Node.js', 'AWS & Cloud', 'Full-Stack Development', 'Microservices'].map((skill, index) => (
+                <div key={index} className="bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full border border-blue-200 text-blue-700 font-medium shadow-sm">
+                  {skill}
+                </div>
+              ))}
+            </div>
+
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mt-12">
               <Button
                 onClick={downloadResume}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 text-lg"
+                className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 <Download className="mr-2 h-5 w-5" />
                 Download Resume
@@ -60,35 +69,35 @@ const Hero = () => {
               <Button
                 variant="outline"
                 onClick={scrollToAbout}
-                className="border-blue-600 text-blue-600 hover:bg-blue-50 px-6 py-3 text-lg"
+                className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-4 text-lg transition-all duration-300"
               >
-                Learn More About Me
+                Explore My Work
               </Button>
             </div>
 
             {/* Social Links */}
-            <div className="flex justify-center space-x-6 mt-8">
+            <div className="flex justify-center space-x-8 mt-12">
               <a
                 href="https://github.com/Ashutosh049-lab"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-600 hover:text-blue-600 transition-colors duration-200"
+                className="text-gray-600 hover:text-blue-600 transition-all duration-300 hover:scale-110"
               >
-                <Github className="h-6 w-6" />
+                <Github className="h-8 w-8" />
               </a>
               <a
                 href="https://linkedin.com/in/ashutosh-kumar-jaiswal-128054256"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-600 hover:text-blue-600 transition-colors duration-200"
+                className="text-gray-600 hover:text-blue-600 transition-all duration-300 hover:scale-110"
               >
-                <Linkedin className="h-6 w-6" />
+                <Linkedin className="h-8 w-8" />
               </a>
               <a
                 href="mailto:jashutosh528@gmail.com"
-                className="text-gray-600 hover:text-blue-600 transition-colors duration-200"
+                className="text-gray-600 hover:text-blue-600 transition-all duration-300 hover:scale-110"
               >
-                <Mail className="h-6 w-6" />
+                <Mail className="h-8 w-8" />
               </a>
             </div>
           </div>
@@ -99,7 +108,7 @@ const Hero = () => {
               onClick={scrollToAbout}
               className="text-gray-400 hover:text-blue-600 transition-colors duration-200"
             >
-              <ArrowDown className="h-6 w-6" />
+              <ArrowDown className="h-8 w-8" />
             </button>
           </div>
         </div>
